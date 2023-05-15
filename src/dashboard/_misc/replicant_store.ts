@@ -1,7 +1,7 @@
 import { RunDataActiveRun, RunFinishTimes } from '@nodecg-speedcontrol/types';
 import type { DefaultSetupTime, HoraroImportSavedOpts, HoraroImportStatus, OengusImportStatus, RunDataActiveRunSurrounding, RunDataArray, Timer, TimerChangesDisabled, TwitchAPIData, TwitchChannelInfo, TwitchCommercialTimer } from '@nodecg-speedcontrol/types/schemas';
 import clone from 'clone';
-import type { ReplicantBrowser } from 'nodecg/types/browser';
+import type { ReplicantBrowser } from 'nodecg-types/types/browser';
 import Vue from 'vue';
 import type { Store } from 'vuex';
 import { namespace } from 'vuex-class';

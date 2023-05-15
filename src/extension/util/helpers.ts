@@ -1,7 +1,7 @@
 import { RunData, RunDataArray, SendMessageAck } from '@nodecg-speedcontrol/types';
 import { Configschema } from '@nodecg-speedcontrol/types/schemas';
 import _ from 'lodash';
-import type { ListenForCb } from 'nodecg/types/lib/nodecg-instance';
+import type { ListenForCb } from 'nodecg-types/types/lib/nodecg-instance';
 import { get } from './nodecg';
 
 const nodecg = get();
@@ -12,7 +12,8 @@ const nodecg = get();
  */
 export function formPlayerNamesStr(runData: RunData): string {
   return runData.teams.map((team) => (
-    team.players.map((player) => player.name).join(', ')
+    team.players.map((player) => player.social.twitch
+    ? `@${player.social.twitch}` : player.name).join(', ')
   )).join(' vs. ') || 'N/A';
 }
 
