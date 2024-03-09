@@ -243,8 +243,7 @@ async function setRunner(runData: RunData, runner: OengusUser, useJapanese: bool
     ? runner.pronouns.split(',')
     : runner.pronouns;
   const player: RunDataPlayer = {
-    name: (useJapanese && runner.usernameJapanese)
-      ? runner.usernameJapanese : runner.username,
+    name: runner.displayName,
     id: uuid(),
     teamID: team.id,
     social: {
